@@ -27,7 +27,7 @@ func TestClient(t *testing.T) {
 	in := &api.WayRequest{}
 	in.ApiField = &api.ApiField{}
 	in.ChannelInfo = &api.ChannelInfo{}
-	in.ChannelInfo.Name= "test"
+	
 	in.OrderField = &api.OrderField{}
 	resp, err := client.GetCode(context.Background(), in)
 	if err != nil {
