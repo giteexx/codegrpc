@@ -14,7 +14,7 @@ func TestClient(t *testing.T) {
 	conn := zrpc.MustNewClient(zrpc.RpcClientConf{
 		Etcd: discov.EtcdConf{ // 通过 etcd 服务发现时，只需要给 Etcd 配置即可
 			Hosts:              []string{"127.0.0.1:2379"},
-			Key:                "code.rpc",
+			Key:                "code.rpc",//通道名称
 			User:               "",    // 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
 			Pass:               "",    // 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
 			CertFile:           "",    // 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
